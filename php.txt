@@ -1,0 +1,106 @@
+        <?php
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "wdmfinal";
+
+            // Create connection
+            $conn = mysqli_connect($servername, $username, $password, $dbname);
+            // Check connection
+            if (!$conn) {
+                die("Connection failed: " . mysqli_connect_error());
+            }
+
+            $sql = "SELECT id, name, description, video_link FROM videos";
+            if($result = mysqli_query($conn, $sql)){
+            if(mysqli_num_rows($result) > 0){
+                // Free result set
+                $rows = ceil(mysqli_num_rows($result)/3);
+                echo $rows;
+                $cols = 3;
+                $i = 0;
+                $j = 0;
+                while($i<2){
+                        $j = 0;
+                        echo "<tr id=\"videos_tr\">";
+                        //$row = $result->fetch_assoc();
+                        while($j < $cols){
+                            $row = $result->fetch_assoc();
+                            if($row != null){
+                                echo "<td>";
+                                echo "<video src=\"".$row["video_link"]."\" width=\"300\"height=\"200\" controls>";
+                                echo "</video>";
+                                echo "<div class=\""."content"."\">";
+                                echo "<h3>".$row["name"]."</h3>";
+                                echo "<p class=\"videosp\">".$row["description"]."URL:".$row["video_link"]."</p>";
+                                echo "</div>";
+                                echo "</td>";
+
+                                $j++;
+
+                            }
+                        }
+                        echo "</tr>";
+                    $i++;   
+
+                    }
+
+                mysqli_free_result($result);
+
+            } else{
+                echo "There are no videos currently.";
+                echo "<br>";
+            }
+        } else{
+            echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+        }
+         
+        // Close connection
+        mysqli_close($conn);
+
+        ?>
+        <?php
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "wdm";
+
+            // Create connection
+            $conn = mysqli_connect($servername, $username, $password, $dbname);
+            // Check connection
+            if (!$conn) {
+                die("Connection failed: " . mysqli_connect_error());
+            }
+
+            $sql = "SELECT name, description, image FROM events";
+            if($result = mysqli_query($conn, $sql)){
+            if(mysqli_num_rows($result) > 0){
+                // Free result set
+                //echo "<h2>There are no events currently.</h2>";
+                $rows = mysqli_num_rows($result);
+                $i = 0;
+                while($i < $rows){
+                    $row = $result->fetch_assoc();
+                    echo "<div id=\"col1eventos\">";
+                    echo "<h3 id=\"eventostitle\"><br><br>".$row["name"]."</h3>";
+                    echo "<p id=\""."eventosdesc"."\">";
+                    echo $row["description"];
+                    echo "</p>";
+                    echo "<div id=\"col2eventos\">";
+                    //echo "<img src=\"".$rows["path"]."\" height=\""."650"."\" width=\""."500"."\" align=\""."middle"."\" id=\""."logo"."\">";
+                    echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
+                    echo "</div>";
+                    $i++;
+                }
+            } else{
+                echo "<h2>There are no events currently.</h2>";
+                echo "<br>";
+            }
+        } else{
+            echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+        }
+         
+        // Close connection
+        mysqli_close($conn);
+
+        ?>

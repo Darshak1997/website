@@ -13,11 +13,86 @@ p {
 	color: #222222;
 }
 
+#proj_echos_table{
+	background-color: red;
+	border: 1px solid black;
+
+}
+
+.vertical-menu {
+	position: absolute;
+  	width: 15%;
+  	top: 10%;
+  	margin-left: -13%;
+}
+
+.vertical-menu a {
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
+.vertical-menu a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#add_proj{
+	position: absolute;
+	margin-left: 20%;
+	top: 20%;
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 20px;
+}
+
+#add_proj input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#add_proj input[type = text], input[type = file], input[type = date], input[type = email], input[type = number]{
+	width: 100%;
+  	padding: 12px 20px;
+  	margin: 8px 0;
+  	display: inline-block;
+  	border: 1px solid #ccc;
+  	border-radius: 4px;
+  	box-sizing: border-box;
+}
+
+.button_echo{
+	background-color: #4CAF50;
+ 	border: none;
+	color: white;
+	padding: 10px 16px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
 header {
 	height: 20%;
-	width: 80%;
-	margin-left: 10%;
-	margin-right: 10%;
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	color: #000033;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -26,18 +101,55 @@ h1,h2,h3,h4,h5,h6 {
 
 nav {
 	font-weight: bold;
-	background-color: #777777;
+	background-color: #2f3742;
 }
 
 footer {
-	font-size: 0.70em;
+	font-size: 0.7em;
+	font-weight: 400;
 	font-style: italic; 
    	position: fixed;
    	text-align: center;
    	left: 0;
+   	height: 70px;
    	bottom: 0;
    	width: 100%;
    	background-color: #000033;
+   	display: inline-block;
+}
+
+#loginbtn {
+	background: linear-gradient(to right, #3fcaff 0%, #a4ffb0 51%, #3fcaff
+				100%); 
+	background-size: 200% auto;
+	padding-top: 0px 35px; 
+	color: #222222;
+	border-radius: 5px;
+	height: 40px;
+	width: 95px;
+	margin-left: 1%;
+	margin-top: -150%;
+}
+
+#footerp {
+	margin-left: -50%; 
+	margin-top: 2.75%;
+	background-color: #000033;
+}
+
+#fblogo {
+	float: right;
+	margin-top: -2%;
+	margin-right: 32%;
+	color: #1a1aff;
+}
+
+#twlogo {
+	float: right;
+	margin-top: -2%;
+	margin-right: 30%;
+	color: #0099ff;
+
 }
 
 a {
@@ -46,16 +158,467 @@ a {
 
 .h {
 	display: inline-block;
-	margin: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
 	font-weight: bold;
 	text-decoration: none;
 	margin-bottom: -1%
 }
 
-.h:active {
+a.selected:link, a.selected:visited {
 	color: blue;
+	font-weight: bold;
+	text-decoration: none;
+	margin-left: 20px;
+	margin-right: 20px;
+	display: inline-block;
+	margin-bottom: -1%
+}
+
+#logo {
+	margin-right: 25px;
+}
+
+#sec1 {
+	margin-left: 10%;
+	margin-top: 20%;
+	display: inline;
+	height: 33%;
+	width: 80%;
+	margin-right: 10%
+}
+
+#sec1div1 {
+	margin-left: 0%;
+	margin-bottom: -3%;
+}
+
+#logosec1 {
+	margin-left: 8%;
+	padding-top: 10%;
+}
+
+#title1 {
+	color: blue;
+	margin-left: 8%;
+	margin-top: 0%;
+	margin-right: 0%;
+}
+
+#title2 {
+	margin-left: 8%;
+	margin-top: -1%;
+}
+
+#biodata {
+	float: right;
+	margin-top: -16%;
+	margin-right: 37%;
+}
+
+#biodatadesc {
+	float: right;
+	margin-top: -13.5%;
+	margin-right: 11.8%;
+	font-size: 15px;
+	width: 35%;
+	font-weight: 400;
+}
+
+#sec2 {
+	margin-top: 12%;
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+#sec2img {
+	margin-left: 37%;
+}
+
+#proposito {
+	margin-top: 0%;
+	margin-left: -20%;
+}
+
+#propositodesc {
+	width: 60%;
+	max-height: 10%;
+	margin-top: -1%;
+	font-size: 15px;
+	margin-left: 10%;
+	font-weight: 400;
+}
+
+#sec3 {
+	margin-top: 10%;
+	background-size: auto;
+	background: #FFFFFF;
+	width: 100%;
+}
+
+#iframeinicio {
+	margin-left: 0%;
+	margin-top: 1%;
+	margin-bottom: 10%;
+}
+
+#objetivos {
+	float: right;
+	margin-top: 0%;
+	margin-right: 38%;
+	font-weight: bold;
+}
+
+#objetivosdesc {
+	float: right;
+	margin-top: -25%;
+	margin-right: 10%;
+	font-size: 15px;
+	font-weight: 400;
+	width: 35%;
 }
 
 
+#centrodiv1 {
+	display: inline;
+	margin-top: 5%;
+}
 
+#misionh {
+	margin-left: 12%;
+	color: blue;
+	padding-top: 8%;
+}
 
+#misiondesc {
+	margin-left: -4%;
+	width: 42%;
+	margin-top: 0%;
+	font-size: 15px;
+	font-weight: 400;
+}
+
+#visionh{
+	float: right;
+	margin-right: 31%;
+	margin-top: -14%;
+	color: blue;
+}
+
+#visiondesc{
+	float : right;
+	margin-right: 12.5%;
+	width: 44%;
+	margin-top: -8%;
+	font-size: 15px;
+	font-weight: 400;
+}
+
+#valores {
+	margin-top: 1%;
+	margin-right: 15.5%;
+}
+
+#valoresdesc {
+	width: 48%;
+	max-height: 10%;
+	margin-top: -1%;
+	font-size: 15px;
+	margin-left: 18%;
+	font-weight: 400;
+}
+
+#valoresimg {
+	margin-left: 40%;
+	margin-top: 8%;
+}
+
+#boxes {
+	display: inline-block;
+	margin-top: 5%;
+}
+
+#col1 {
+	height: 10%;
+	width: 23.5%;
+	margin-left: -1%;
+	margin-top: 1%;
+	background-color: #F8F8FF; 
+	float : left;
+}
+
+#col1social {
+	margin-top: 1%;
+}
+
+#col1socialdesc {
+	font-size: 15px;
+	background-color: #F8F8FF; 
+	margin-top: -2%;
+	margin-bottom: -2%;
+	padding-left: 4%;
+	padding-right: 4%;
+	font-weight: 400;
+}
+
+#col1corrdesc {
+	font-size: 15px;
+	font-weight: 400;
+	background-color: #F8F8FF; 
+	margin-top: -6%;
+	margin-bottom: -2%;
+	padding-left: 4%;
+	padding-right: 4%;
+}
+
+#col2 {
+	float: left;
+	width: 26.5%;
+	display: block;
+	margin-left: 5%;
+	margin-top: 0%;
+}
+
+#col21 {
+	margin-left: 10%;
+	margin-top: 1%;
+	margin-bottom: 2%;
+	height: 20%;
+	background-color: #F8F8FF; 
+}
+
+#col22 {
+	margin-left: 10%;
+	margin-top: -4%;
+	height: 20%;
+	background-color: #F8F8FF; 
+}
+
+#fradesc {
+	background-color: #F8F8FF; 
+	font-size: 15px;
+	font-weight: 400;
+	margin-top: -3%;
+	padding-left: 4%;
+	padding-right: 4%;
+}
+
+#soldesc {
+	background-color: #F8F8FF; 
+	font-size: 15px;
+	font-weight: 400;
+	margin-top: -3%;
+	padding-left: 4%;
+	padding-right: 4%;
+}
+
+#col21fra {
+	margin-top: 5%;
+}
+
+#col22sol {
+	margin-top: 0%;
+}
+
+#col3{
+	float: right;
+	width: 22%;
+	display: block;
+	margin-right: 18%;
+	margin-bottom: 5%;
+}
+
+#col31 {
+	margin-left: 10%;
+	margin-top: -1%;
+	height: 20%;
+	background-color: #F8F8FF; 
+}
+
+#col32 {
+	margin-left: 10%;
+	margin-top: -1%;
+	margin-bottom: 2%;
+	height: 25%;
+	background-color: #F8F8FF; 
+}
+
+#col31lib{
+	background-color: #F8F8FF; 
+}
+
+#libdesc{
+	background-color: #F8F8FF; 
+	font-size: 15px;
+	font-weight: 400;
+	margin-top: -8%;
+	padding-left: 4%;
+	padding-right: 4%;
+}
+
+#col32{
+
+}
+
+#col32con {
+	background-color: #F8F8FF; 
+}
+
+#condesc {
+	background-color: #F8F8FF; 
+	font-size: 15px;
+	font-weight: 400;
+	margin-top: -8%;
+	padding-left: 4%;
+	padding-right: 4%;
+}
+
+#eventos {
+	display: inline-block;
+}
+
+#col1eventos {
+	float: left;
+	margin-left: 0%;
+	margin-top: 6%;
+	margin-bottom: 8%;
+	width: 35%;
+	font-size: 15px;
+	font-weight: 400;
+}
+
+#col2eventos {
+	float: right;
+	margin-right: 13%;
+	margin-top: 18%;
+}
+
+#login {
+	margin-top: 15%;
+	margin-left: 40%;
+}
+
+#logint {
+	margin-top: 0%;
+	margin-left: -15%;
+}
+
+#inputs {
+	display: inline;
+}
+
+#email {
+	float: left;
+	border-radius: 4px;
+	width: 40%;
+	height: 30px;
+	margin-right : 20%;
+	margin-left: -35%;
+}
+
+#pwd {
+	float: right;
+	border-radius: 4px;
+	width: 40%;
+	height: 30px;
+	margin-right : 49%;
+	margin-top: -5.1%;
+}
+
+::placeholder {
+	opacity: 2;
+	padding-left: 5px;
+	font-size: 15px;
+	font-weight: 400;
+}	
+
+#registro1 {
+	margin-top: 10%;
+	margin-left: -13%;
+	margin-bottom: 8%;
+}
+
+#registroh {
+	margin-left: -2%;
+}
+
+#registro2 {
+	display: inline;
+	margin-top: 5%;
+}
+
+#rname {
+	border-radius: 4px;
+	width: 175%;
+	height: 30px;
+	margin-left: -0%;
+	margin-top: -1.9%;
+}
+
+#remail {
+	border-radius: 4px;
+	width: 175%;
+	height: 30px;
+	margin-right : 0%;
+}
+
+#rpwd {
+	border-radius: 4px;
+	width: 175%;
+	height: 30px;
+}
+
+#rpwd1 {
+	border-radius: 4px;
+	width: 175%;
+	height: 30px;
+}
+
+#rdir {
+	border-radius: 4px;
+	width: 49%;
+	height: 30px;
+	margin-top: 0%;
+}
+
+#rdiv1 {
+	display: inline-block;
+	margin-top: -5%;
+}
+
+#rdiv2 {
+	display: inline-block;
+	margin-left: 13%;
+}
+
+#rdiv3 {
+	display: inline;
+	margin-left: -40.1%;
+}
+
+#nonform {
+	margin-left: 68%;
+	margin-top: -17%;
+}
+
+#formr {
+	margin-left: -2%;
+}
+
+#rh {
+	margin-left: -34%;
+}
+
+#loginbtnr {
+
+	background: linear-gradient(to right, #3fcaff 0%, #a4ffb0 51%, #3fcaff
+				100%); 
+	background-size: 200% auto;
+	padding-top: 0px 35px; 
+	color: #222222;
+	border-radius: 5px;
+	height: 40px;
+	width: 95px;
+
+}
